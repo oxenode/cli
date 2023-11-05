@@ -1,0 +1,38 @@
+import { port } from '@oxenode/core'
+import { Textarea } from '@oxenode/ui'
+
+/**
+ * Node's Name
+ */
+export const Name = "{{NODE_NAME}}";
+
+/**
+ * Node's React Component
+ */
+export function Content({ nodeId }) {
+    return (
+        <>
+            <h1>{{NODE_NAME}}</h1>
+            <Textarea 
+                name="myValue"
+                nodeId={nodeId}
+            />
+        </>
+    );
+}
+
+/**
+ * When Node is triggered
+*/
+export function OnTrigger({ state }) {
+    // do something with state
+
+    // console.log(state.myValue)
+}
+
+/**
+ * Node's Ports
+ */
+export const ports = [
+    port.input().type('trigger')
+];

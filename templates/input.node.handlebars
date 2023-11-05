@@ -1,0 +1,34 @@
+import { port } from '@oxenode/core'
+
+/**
+ * Node's Name
+ */
+export const Name = "{{NODE_NAME}}";
+
+/**
+ * Node's React Component
+ */
+export function Content({}) {
+    return (
+        <>
+            <h1>{{ NODE_NAME }}</h1>
+        </>
+    );
+}
+
+/**
+ * When Node is triggered
+*/
+export function OnTrigger({ input }) {
+    // do something with input
+
+    // console.log(input.myValue)
+}
+
+/**
+ * Node's Ports
+ */
+export const ports = [
+    port.input().type('trigger'),
+    port.input().type('string').label('myValue')
+];

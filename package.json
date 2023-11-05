@@ -1,0 +1,9 @@
+{
+    "name": "@oxenode/cli",
+    "version": "0.0.1",
+    "main": "cli.js",
+    "bin": {
+        "oxenode": "cli.js"
+    },
+    "preferGlobal": true
+}
