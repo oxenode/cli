@@ -1,6 +1,6 @@
 {
     "name": "@oxenode/cli",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "main": "cli.js",
     "bin": {
         "oxenode": "cli.js"
