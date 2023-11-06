@@ -11,7 +11,7 @@ const SUBCOMMANDS = require('./lib/subcommands');
 
 const commands = {
     // New subcommand names
-    ...SUBCOMMANDS['create-node'],
+    ...SUBCOMMANDS,
 
     // Rewrite under old names
     node: SUBCOMMANDS['create-node'],
