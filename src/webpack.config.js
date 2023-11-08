@@ -8,6 +8,11 @@ const pluginConfig = JSON.parse(fs.readFileSync('./.oxerc', 'utf-8'));
 // Find all the source files
 const files = glob.sync('./src/**/*.{ts,tsx}');
 
+const {
+  CheckExportWebpackPlugin,
+  CheckDefaultExportWebpackPlugin
+} = require('@oxenode/cli/lib/plugins/checkExports');
+
 // Generate an entries object
 const entries = files.reduce((entries, entry) => {
   const singleEntry = path.parse(entry);
@@ -87,6 +92,12 @@ module.exports = {
     'react-dom': 'ReactDOM',
     'react/jsx-runtime': 'jsxRuntimeExports'
  },
+ plugins: [
+  new CheckExportWebpackPlugin('Name'),
+  new CheckExportWebpackPlugin('Content'),
+  new CheckDefaultExportWebpackPlugin('Content'),
+  new CheckExportWebpackPlugin('ports')
+ ],
  externalsType: 'window',
   module: {
     rules: [
