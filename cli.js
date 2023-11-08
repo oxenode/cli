@@ -20,3 +20,5 @@ const commands = {
 
 if (commands[subcmd]) 
     commands[subcmd](arg1, arg2);
+else
+    commands['help']();

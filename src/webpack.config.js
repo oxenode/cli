@@ -8,8 +8,6 @@ const pluginConfig = JSON.parse(fs.readFileSync('./.oxerc', 'utf-8'));
 // Find all the source files
 const files = glob.sync('./src/**/*.{ts,tsx}');
 
-const DEV = false;
-
 // Generate an entries object
 const entries = files.reduce((entries, entry) => {
   const singleEntry = path.parse(entry);
@@ -43,7 +41,6 @@ pluginMeta(files);
 
 module.exports = {
   mode: 'production',
-  watch: DEV,
   devServer: {
     static: {
       directory: path.join(__dirname, 'dist'),
