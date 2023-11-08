@@ -1,41 +1,44 @@
 {
-  "name": "oxenode-std-myplugin",
-  "version": "0.0.1",
-  "scripts": {
-    "build": "webpack"
-  },
-  "dependencies": {
-    "@oxenode/core": "^1.0.0",
-    "@oxenode/ui": "^1.0.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
-  "resolutions": {
-    "@oxenode/core": "^1.0.0"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.23.2",
-    "@babel/plugin-transform-react-jsx": "^7.22.15",
-    "@babel/plugin-transform-runtime": "^7.23.2",
-    "@babel/preset-env": "^7.23.2",
-    "@babel/preset-react": "^7.22.15",
-    "@babel/preset-typescript": "^7.23.2",
-    "babel-loader": "^9.1.3",
-    "css-loader": "^6.8.1",
-    "esbuild-loader": "^4.0.2",
-    "eslint-loader": "^4.0.2",
-    "glob": "^10.3.10",
-    "style-loader": "^3.3.3",
-    "terser-webpack-plugin": "^5.3.9",
-    "ts-loader": "^9.5.0",
-    "typescript": "^5.2.2",
-    "webpack": "^5.89.0",
-    "webpack-cli": "^5.1.4"
-  },
-  "peerDependencies": {
-    "@types/react": "^18.2.34",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-jsx-runtime": "^1.0.0-alpha.1"
-  }
+    "name": "oxenode-plugin",
+    "version": "0.0.1",
+    "scripts": {
+        "build": "webpack",
+        "dev": "node dev.js"
+    },
+    "dependencies": {
+        "@oxenode/core": "^1.0.0",
+        "@oxenode/ui": "^1.0.0",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
+    },
+    "resolutions": {
+        "@oxenode/core": "^1.0.0"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.23.2",
+        "@babel/plugin-transform-react-jsx": "^7.22.15",
+        "@babel/plugin-transform-runtime": "^7.23.2",
+        "@babel/preset-env": "^7.23.2",
+        "@babel/preset-react": "^7.22.15",
+        "@babel/preset-typescript": "^7.23.2",
+        "babel-loader": "^9.1.3",
+        "css-loader": "^6.8.1",
+        "esbuild-loader": "^4.0.2",
+        "eslint-loader": "^4.0.2",
+        "express": "^4.18.2",
+        "glob": "^10.3.10",
+        "style-loader": "^3.3.3",
+        "terser-webpack-plugin": "^5.3.9",
+        "ts-loader": "^9.5.0",
+        "typescript": "^5.2.2",
+        "webpack": "^5.89.0",
+        "webpack-cli": "^5.1.4",
+        "webpack-dev-server": "^4.15.1"
+    },
+    "peerDependencies": {
+        "@types/react": "^18.2.34",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-jsx-runtime": "^1.0.0-alpha.1"
+    }
 }
