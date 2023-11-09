@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "outDir": "./dist",
+        "sourceMap": true,
+        "noImplicitAny": true,
+        "module": "ESNext",
+        "target": "es6",
+        "jsx": "react-jsx",
+        "moduleResolution": "Bundler",
+        "allowJs": true
+    },
+    "include": ["./src/**/*"]
+}
