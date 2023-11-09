@@ -11,7 +11,7 @@ const files = glob.sync('./src/**/*.{ts,tsx}');
 const {
   CheckExportWebpackPlugin,
   CheckDefaultExportWebpackPlugin
-} = require('@oxenode/cli/lib/plugins/checkExports');
+} = require('@oxenode/cli');
 
 // Generate an entries object
 const entries = files.reduce((entries, entry) => {
