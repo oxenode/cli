@@ -19,6 +19,6 @@ const commands = {
 }
 
 if (commands[subcmd]) 
-    commands[subcmd](arg1, arg2);
+    commands[subcmd].command(arg1, arg2);
 else
-    commands['help']();
+    commands['help'].command();
