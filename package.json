@@ -1,13 +1,13 @@
 {
     "name": "@oxenode/cli",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "main": "./lib/index.js",
-
     "bin": {
         "oxenode": "cli.js"
     },
     "preferGlobal": true,
     "dependencies": {
+        "cors": "^2.8.5",
         "express": "^4.18.2",
         "webpack": "^5.89.0"
     }
