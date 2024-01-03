@@ -7,22 +7,22 @@
         "watch": "nodemon --watch src -e ts,tsx,js,jsx --exec 'npm run dev'"
     },
     "dependencies": {
-        "@oxenode/core": "^1.0.0",
-        "@oxenode/ui": "^1.0.0",
+        "@oxenode/core": "^1.1.3",
+        "@oxenode/ui": "^1.1.1",
         "react": "^18.2.0",
         "react-dom": "^18.2.0"
     },
     "resolutions": {
-        "@oxenode/core": "^1.0.0"
+        "@oxenode/core": "^1.1.3"
     },
     "devDependencies": {
+        "@oxenode/cli": "*",
         "@babel/core": "^7.23.2",
         "@babel/plugin-transform-react-jsx": "^7.22.15",
         "@babel/plugin-transform-runtime": "^7.23.2",
         "@babel/preset-env": "^7.23.2",
         "@babel/preset-react": "^7.22.15",
         "@babel/preset-typescript": "^7.23.2",
-        "@oxenode/cli": "^0.0.8",
         "babel-loader": "^9.1.3",
         "css-loader": "^6.8.1",
         "esbuild-loader": "^4.0.2",
