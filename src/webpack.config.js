@@ -6,7 +6,7 @@ const pkg = require('./package.json');
 const pluginConfig = JSON.parse(fs.readFileSync('./.oxerc', 'utf-8'));
 
 // Find all the source files
-const files = glob.sync('./src/**/*.{ts,tsx}');
+const files = glob.sync('./src/**/*.{jsx,tsx}');
 
 const {
   CheckExportWebpackPlugin,
@@ -68,7 +68,7 @@ module.exports = {
     globalObject: 'this'
   },
   resolve: {
-    extensions: ['.tsx', '.ts', '.js'],
+    extensions: ['.tsx', '.jsx'],
   },
   optimization: {
     usedExports: true,
@@ -102,7 +102,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(ts|tsx)$/,
+        test: /\.(jsx|tsx)$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
