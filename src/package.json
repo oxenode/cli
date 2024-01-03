@@ -3,8 +3,7 @@
     "version": "0.0.1",
     "scripts": {
         "build": "webpack",
-        "dev": "oxenode dev",
-        "watch": "nodemon --watch src -e ts,tsx,js,jsx --exec 'npm run dev'"
+        "dev": "nodemon --watch src -e tsx,jsx --exec 'oxenode dev'"
     },
     "dependencies": {
         "@oxenode/core": "^1.1.3",
