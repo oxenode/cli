@@ -1,6 +1,6 @@
 # `@oxenode/cli`
 
-Oxenode's cli, lets you to create an Oxenode plugin project with all the tools required for development.
+Oxenode's cli lets you to create an Oxenode plugin project with all the tools required for development.
 You can find a documentation article on [creating your plugin](https://oxenode.io/docs/Create-a-plugin/) on the official site.
 
 ## Installation
