@@ -1,17 +1,21 @@
-const path = require('path');
+const fs = require('node:fs');
+const path = require('node:path');
+
 const glob = require('glob');
 const terser = require('terser-webpack-plugin');
-const fs = require('node:fs');
-const pkg = require('./package.json');
-const pluginConfig = JSON.parse(fs.readFileSync('./.oxerc', 'utf-8'));
-
-// Find all the source files
-const files = glob.sync('./src/**/*.{jsx,tsx}');
 
 const {
   CheckExportWebpackPlugin,
   CheckDefaultExportWebpackPlugin
 } = require('@oxenode/cli');
+
+const pkg = require('./package.json');
+const pluginConfig = JSON.parse(
+  fs.readFileSync('./.oxerc', 'utf-8')
+);
+
+// Find all the source files
+const files = glob.sync('./src/**/*.{jsx,tsx}');
 
 // Generate an entries object
 const entries = files.reduce((entries, entry) => {
@@ -53,6 +57,7 @@ module.exports = {
     liveReload: false,
     hot: false,
     compress: true,
+    host: 'localhost',
     port: 5500,
   },
   entry: entries,
